@@ -1,5 +1,7 @@
 import Button from "@/components/button";
+import Chattext from "@/components/chattext";
 import Footer from "@/components/footer";
+import Logo from "@/components/logo";
 import Navbar from "@/components/navbar";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,10 +11,10 @@ export default function Home() {
     <>
       <Navbar />
 
-      <section className="py-15 w-full flex flex-col items-center text-center gap-12">
+      <section className="py-15 w-full flex flex-col justify-center min-h-[80vh] items-center text-center gap-12">
         <div className="px-4 container flex flex-col items-center gap-7">
-          <h1 className="font-bold text-6xl">Stay Ahead of Traffic Congestion</h1>
-          <p className="text-2xl w-[1000px] max-w-full">Get real-time traffic updates in an instant! With just a few taps, our WhatsApp chatbot keeps you ahead of the road—saving you time and stress on every commute.</p>
+          <h1 className="font-bold text-6xl leading-18">Stay Ahead of Traffic Congestion</h1>
+          <p className="text-2xl w-[1000px] max-w-[80vw] leading-10">Get real-time traffic updates in an instant! With just a few taps, our WhatsApp chatbot keeps you ahead of the road—saving you time and stress on every commute.</p>
           <div className="flex flex-wrap justify-center gap-6">
             <Link href="/">
               <Button
@@ -61,10 +63,44 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="w-full flex flex-col text-center items-center justify-center">
+        <div className="container flex flex-col justify-center gap-9 max-w-[80vw]">
+          <p className="tracking-[16px] text-black">Sponsored by</p>
+          <div className="flex flex-wrap justify-center md:justify-between gap-16">
+            <Logo color={false} />
+            <Logo color={false} />
+            <Logo color={false} />
+            <Logo color={false} />
+            <Logo color={false} />
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full flex flex-col text-center items-center justify-center pt-[130px] px-8 gap-10">
+        <div className="container max-w-[1000px]">
+          <h1 className="font-bold text-4xl leading-12 text-center">"We keep you from getting <span className="bg-[#DFE6FF] px-4 py-1 rounded-full">stuck in traffic,</span> so you can stay on the move and reach your destination faster."</h1>
+        </div>
+        <div className="text-4xl flex flex-col container gap-10 max-w-[1000px]">
+          <div className="w-full flex">
+            <Chattext
+              text="There is no traffic jam on your usual destination today"
+              backgroundColor="#ffffff"
+            />
+          </div>
+          <div className="w-full flex justify-end lg:relative lg:bottom-6">
+            <Chattext
+              text="There is a heavy traffic jam on your usual route today. I would suggest taking an alternate route through mainland, Lagos."
+              backgroundColor="#DFE6FF"
+              thumb={true}
+            />
+          </div>
+        </div>
+      </section>
+
       <section className="w-full flex justify-center px-10 relative -bottom-12 z-50">
         <div className="flex flex-wrap justify-center lg:justify-between text-center lg:text-start items-center container bg-[#3F4AE4] gap-10 px-8 lg:px-28 py-16 text-white rounded-[40px]">
           <div className="flex flex-col gap-6 items-center lg:items-start">
-            <h1 className="text-5xl font-medium">Changing the narrative on the road</h1>
+            <h1 className="text-5xl font-medium w-[80%] leading-14">Changing the narrative on the road</h1>
             <p className="text-2xl">Helping road users reduce stress and fear of traffic congestion</p>
             <div className="flex flex-wrap justify-center gap-6">
               <Link href="/">
@@ -91,7 +127,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
 
       <Footer />
     </>

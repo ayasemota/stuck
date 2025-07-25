@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${play.variable} antialiased bg-white text-black`}
+        className={`${play.variable} antialiased bg-white text-[#5A5A5A]`}
       >
         {children}
       </body>
