@@ -78,7 +78,7 @@ export default function Home() {
 
       <section className="w-full flex flex-col text-center items-center justify-center pt-[130px] px-8 gap-10">
         <div className="container max-w-[1000px]">
-          <h1 className="font-bold text-4xl leading-12 text-center">"We keep you from getting <span className="bg-[#DFE6FF] px-4 py-1 rounded-full">stuck in traffic,</span> so you can stay on the move and reach your destination faster."</h1>
+          <h1 className="font-bold text-4xl leading-12 text-center">&quot;We keep you from getting <span className="bg-[#DFE6FF] px-4 py-1 rounded-full">stuck in traffic,</span> so you can stay on the move and reach your destination faster.&quot;</h1>
         </div>
         <div className="text-4xl flex flex-col container gap-10 max-w-[1000px]">
           <div className="w-full flex">
