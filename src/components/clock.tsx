@@ -3,7 +3,9 @@
 import { useEffect, useState } from 'react';
 
 const Clock = () => {
-    const [time, setTime] = useState('');
+    const [hours, setHours] = useState('');
+    const [minutes, setMinutes] = useState('');
+    const [showColon, setShowColon] = useState(true);
     const [timeZoneLabel, setTimeZoneLabel] = useState('');
 
     useEffect(() => {
@@ -11,27 +13,38 @@ const Clock = () => {
 
         const updateTime = () => {
             const systemTZ = getSystemTimeZone();
+            const now = new Date();
 
-            const currentTime = new Date().toLocaleTimeString('en-US', {
+            const formattedTime = now.toLocaleTimeString('en-US', {
                 timeZone: systemTZ,
                 hour: '2-digit',
                 minute: '2-digit',
+                hour12: true,
             });
 
-            setTime(currentTime);
+            const [hh, mm] = formattedTime.split(':');
+            setHours(hh);
+            setMinutes(mm);
             setTimeZoneLabel(systemTZ);
         };
 
         updateTime();
-        const interval = setInterval(updateTime, 1000);
+        const timeInterval = setInterval(updateTime, 1000);
+        const blinkInterval = setInterval(() => setShowColon(prev => !prev), 500);
 
-        return () => clearInterval(interval);
+        return () => {
+            clearInterval(timeInterval);
+            clearInterval(blinkInterval);
+        };
     }, []);
 
     return (
         <div className="hidden md:inline">
             <p>
-                <span>{time}</span> ⚡ <span>{timeZoneLabel}</span>
+                <span>{hours}</span>
+                <span style={{ visibility: showColon ? 'visible' : 'hidden' }}>:</span>
+                <span>{minutes}</span>
+                {' '}⚡ <span className='text-[#0033EA]'>{timeZoneLabel}</span>
             </p>
         </div>
     );

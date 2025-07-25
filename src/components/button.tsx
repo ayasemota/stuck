@@ -10,10 +10,10 @@ export default function Button({ text, fill }: ButtonProps) {
         <button
             className={
                 fill === 'blue'
-                    ? 'bg-[#0033EA] text-white px-6 py-3 rounded-lg'
+                    ? 'bg-[#0033EA] text-white px-6 py-3 rounded-lg cursor-pointer'
                     : fill === 'white'
-                        ? 'bg-white text-[#0033EA] border-[#0033EA] px-6 py-3 rounded-lg'
-                        : 'border border-[#0033EA] text-[#0033EA] px-6 py-3 rounded-lg'
+                        ? 'bg-white text-[#0033EA] border-[#0033EA] border-1 px-6 py-3 rounded-lg cursor-pointer'
+                        : 'border border-[#0033EA] text-[#0033EA] px-6 py-3 rounded-lg cursor-pointer'
             }
         >
             <p>{text}</p>
