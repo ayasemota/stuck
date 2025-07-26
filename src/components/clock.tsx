@@ -44,7 +44,7 @@ const Clock = () => {
                 <span>{hours}</span>
                 <span style={{ visibility: showColon ? 'visible' : 'hidden' }}>:</span>
                 <span>{minutes}</span>
-                {' '}⚡ <span className='text-[#0033EA]'>{timeZoneLabel}</span>
+                {' '}⚡ <span className='text-[#3F4AE4]'>{timeZoneLabel}</span>
             </p>
         </div>
     );

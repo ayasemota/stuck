@@ -10,7 +10,7 @@ export default function Chattext({ text, backgroundColor, thumb}: CardProps) {
     return (
         <div
             style={{ backgroundColor }}
-            className="py-6 px-10 text-start shadow-[0_4.28px_4.28px_0_rgba(0,0,0,0.10)] rounded-xl flex flex-col gap-3 relative"
+            className="py-6 px-10 text-start shadow-[0_4.28px_4.28px_0_rgba(0,0,0,0.10)] rounded-tr-4xl rounded-br-4xl rounded-bl-4xl rounded-tl-none flex flex-col gap-3 relative"
         >
             <p className="text-2xl text-black max-w-[400px]">{text}</p>
             <div className="flex items-center justify-end gap-2">

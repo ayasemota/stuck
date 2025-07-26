@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${play.variable} antialiased bg-white text-[#5A5A5A]`}
-      >
+      > 
         {children}
       </body>
     </html>
