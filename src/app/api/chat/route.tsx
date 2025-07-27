@@ -30,7 +30,7 @@ export async function POST(req: Request) {
     } catch (error) {
         console.error("OpenAI API error:", error);
         return NextResponse.json(
-            { text: "❌ Stuck servers are currently unavailable. Please try again later." },
+            { text: "‼️ Stuck servers are currently unavailable. Please try again later." },
             { status: 500 }
         );
     }
