@@ -40,7 +40,7 @@ export default function Chat() {
             };
 
             setMessages(prev => [...prev, botMessage]);
-        } catch (error) {
+        } catch {
             setMessages(prev => [...prev, {
                 sender: "bot",
                 text: "⚠️ Failed to get response from AI.",
