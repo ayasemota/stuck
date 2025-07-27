@@ -5,7 +5,7 @@ export default function Footer() {
     return (
         <footer className="bg-white text-black border-t border-[#b7b7b7] backdrop-blur-md py-8 rounded-t-4xl">
             <div className="flex flex-col gap-[88px] pt-10">
-                <div className="container mx-auto justify-between p-4 gap-10 grid grid-cols-1 md:flex md:flex-wrap">
+                <div className="container justify-between p-10 gap-10 grid grid-cols-1 md:flex md:flex-wrap">
                     <div className="flex flex-col gap-4 w-fit">
                         <h1 className="text-3xl">Company</h1>
                         <Link href="/" className="text-lg">Home</Link>

@@ -1,4 +1,5 @@
 import Button from "@/components/button"
+import Chat from "@/components/chat"
 import Footer from "@/components/footer"
 import Navbar from "@/components/navbar"
 import Image from "next/image"
@@ -19,7 +20,7 @@ export default function getStarted() {
 
                 <div className="text-start">
                     <div className="flex flex-wrap justify-center gap-10 max-w-[90vw]">
-                        <div className="bg-[#3F4AE4] p-10 min-h-[470px] w-[360px] flex flex-col gap-6 rounded-2xl">
+                        <div className="bg-[#3F4AE4] p-10 min-h-[470px] w-[360px] flex flex-col gap-6 rounded-2xl hover:scale-105 transition-all translate-2">
                             <h1 className="text-white text-3xl font-bold">Start Messaging for Free</h1>
                             <p className="text-[#C0C4FF]">Get traffic updates via WhatsApp with no stress for free</p>
                             <Link href="/Getstarted" className="pointer">
@@ -29,7 +30,7 @@ export default function getStarted() {
                                 />
                             </Link>
                         </div>
-                        <div className="bg-white border border-[#3F4AE4] text-[#3F4AE4] p-10 min-h-[470px] w-[360px] flex flex-col gap-6 rounded-2xl">
+                        <div className="bg-white border border-[#3F4AE4] text-[#3F4AE4] p-10 min-h-[470px] w-[360px] flex flex-col gap-6 rounded-2xl hover:scale-105 transition-all translate-2">
                             <h1 className="text-3xl font-bold">Download our app for a better experience</h1>
                             <p className="text-[#3f63e7]">Get notifications on your mobile device on real time traffic data with no click. This feature allows you to have a preset steady location saved to our database</p>
                             <div className="flex gap-2">
@@ -57,6 +58,8 @@ export default function getStarted() {
             </section>
 
             <Footer />
+
+            <Chat />
         </ >
     )
 }

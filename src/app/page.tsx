@@ -1,7 +1,5 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import Button from "@/components/button";
+import Chat from "@/components/chat";
 import Chattext from "@/components/chattext";
 import Footer from "@/components/footer";
 import Logo from "@/components/logo";
@@ -10,22 +8,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
-  const [showButton, setShowButton] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > window.innerHeight) {
-        setShowButton(true);
-      } else {
-        setShowButton(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <>
       <Navbar />
@@ -86,11 +68,11 @@ export default function Home() {
         <div className="container flex flex-col justify-center gap-9 max-w-[80vw]">
           <p className="tracking-[16px] text-black">Sponsored by</p>
           <div className="flex flex-wrap justify-center md:justify-between gap-16">
-            <Logo color={false} />
-            <Logo color={false} />
-            <Logo color={false} />
-            <Logo color={false} />
-            <Logo color={false} />
+            <Logo width={103} color={false} />
+            <Logo width={103} color={false} />
+            <Logo width={103} color={false} />
+            <Logo width={103} color={false} />
+            <Logo width={103} color={false} />
           </div>
         </div>
       </section>
@@ -192,13 +174,7 @@ export default function Home() {
 
       <Footer />
 
-      {showButton && (
-        <div className="fixed bottom-10 right-10 bg-[#3F4AE4] p-3 rounded-full shadow-lg cursor-pointer hover:shadow-xl transition-shadow duration-300 z-50">
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="31" viewBox="0 0 30 31" fill="none">
-            <path d="M8.90356 12.1862H21.1025M8.90356 18.8138H17.6032M15.003 30C18.0443 29.9993 21.0026 28.973 23.4306 27.0762C25.8585 25.1794 27.6242 22.5153 28.4604 19.4869C29.2966 16.4585 29.1579 13.2304 28.0654 10.2908C26.9728 7.35125 24.9857 4.86011 22.4047 3.19414C19.8236 1.52817 16.789 0.777982 13.7598 1.05703C10.7305 1.33607 7.87132 2.62917 5.61467 4.74077C3.35803 6.85237 1.82664 9.66761 1.25211 12.7607C0.677572 15.8539 1.09114 19.0566 2.43027 21.8847C2.59373 22.2296 2.64822 22.6183 2.56497 22.9914L1.32995 28.5343C1.29513 28.6899 1.29912 28.852 1.34155 29.0055C1.38398 29.1591 1.46345 29.2989 1.57247 29.4118C1.68148 29.5247 1.81646 29.607 1.96468 29.6509C2.1129 29.6949 2.26948 29.699 2.41968 29.6629L7.76994 28.3822C8.13118 28.3003 8.50865 28.3502 8.83848 28.5233C10.7567 29.499 12.866 30.0042 15.003 30Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </div>
-      )}
+      <Chat />
     </>
   );
 }
