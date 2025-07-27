@@ -57,9 +57,7 @@ export default function getStarted() {
             </section>
 
             <Footer />
-            <div className="z-[9999]">
-                <Chat />
-            </div>
+            <Chat />
         </ >
     )
 }

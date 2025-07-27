@@ -82,7 +82,7 @@ export default function Chat() {
             {isOpen && (
                 <div
                     className={`fixed z-50 flex flex-col overflow-hidden transition-all duration-300 bg-white shadow-xl ${isFullScreen
-                            ? "top-0 left-0 w-screen h-screen rounded-none"
+                            ? "top-0 left-0 w-screen h-[100dvh] rounded-none"
                             : "bottom-30 right-10 w-96 max-w-[90vw] rounded-lg"
                         }`}
                 >
@@ -110,7 +110,7 @@ export default function Chat() {
                     </div>
 
                     <div
-                        className={`flex-1 overflow-y-auto px-4 py-3 space-y-3 text-sm text-neutral-800 ${isFullScreen ? "max-h-full" : "max-h-80"
+                        className={`flex-1 overflow-y-auto px-4 py-3 space-y-3 text-sm text-neutral-800 ${isFullScreen ? "max-h-[100dvh]" : "max-h-80"
                             }`}
                     >
                         {messages.length === 0 ? (

@@ -168,7 +168,6 @@ export default function Home() {
       </section>
 
       <Footer />
-
       <Chat />
     </>
   );
