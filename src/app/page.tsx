@@ -40,7 +40,7 @@ export default function Home() {
               height={350}
             />
           </div>
-          <div className="w-[30%] min-w-[100px] rotate-6 relative bottom-12 -ml-10">
+          <div className="z-10 w-[30%] min-w-[100px] rotate-6 relative bottom-12 -ml-10">
             <Image
               src="/stuckdemo1.png"
               alt="Stuck Demo 1"
