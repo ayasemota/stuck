@@ -98,23 +98,24 @@ export default function Chat() {
 
             {isOpen && (
                 <div
-                    className={`fixed z-50 flex overflow-hidden transition-all duration-300 bg-white shadow-xl ${isFullScreen
-                        ? "top-0 left-0 w-screen h-[100dvh] rounded-none"
-                        : "bottom-26 right-6 w-96 max-w-[90vw] rounded-lg"
+                    className={`fixed z-50 overflow-y-auto flex overflow-hidden transition-all duration-300 bg-white shadow-xl 
+                        ${isFullScreen
+                            ? "top-0 left-0 w-screen h-[100dvh] rounded-none"
+                            : "bottom-26 right-6 w-96 max-h-[60vh] rounded-lg"
                         }`}
                 >
-                    <div className="flex flex-col justify-between h-full w-full">
+                    <div className="flex flex-col justify-between w-full">
                         <div className="px-6 py-5 bg-neutral-50 flex justify-between items-center border-b border-[#b7b7b7]">
                             <div className="w-[10%]">
                                 <Logo width={80} color={true} main={false} />
                             </div>
                             <div
-                                onClick={toggleFullScreen}
-                                className="h-5 w-5 rounded-full flex justify-center items-center cursor-pointer"
+                                className="h-5 w-5 rounded-full flex justify-end gap-6 items-center"
                             >
-                                <div
+                                <Link href="#"
+                                    title="Toogle Full Screen"
                                     onClick={toggleFullScreen}
-                                    className="h-5 w-5 rounded-full flex justify-center items-center cursor-pointer"
+                                    className="h-5 w-5 rounded-full flex justify-center items-center hover:scale-110"
                                 >
                                     {isFullScreen ? (
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -128,32 +129,42 @@ export default function Chat() {
                                             />
                                         </svg>
                                     )}
-                                </div>
+                                </Link>
+                                <Link href="#" title="Clear Chat">
+                                    <div
+                                        onClick={() => {
+                                            setMessages([]);
+                                            setInput("");
+                                            inputRef.current?.focus();
+                                        }}
+                                        className="flex items-center hover:scale-110"
+
+                                    >
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="21" viewBox="0 0 19 21" fill="none">
+                                            <path d="M18.1158 10.1313C17.8812 8.97935 17.4207 7.88529 16.7608 6.91231C16.1144 5.95375 15.2894 5.12871 14.3308 4.48231C13.3566 3.82479 12.263 3.36445 11.1118 3.12731C10.507 3.00445 9.89105 2.94413 9.27383 2.94731V0.945312L5.29883 3.94531L9.27383 6.94531V4.94731C9.75783 4.94531 10.2418 4.99131 10.7088 5.08731C11.6035 5.27169 12.4535 5.62942 13.2108 6.14031C13.9573 6.64346 14.5997 7.28586 15.1028 8.03231C15.884 9.18762 16.3006 10.5507 16.2988 11.9453C16.2995 12.8813 16.1125 13.8079 15.7488 14.6703C15.573 15.0862 15.3573 15.484 15.1048 15.8583C14.8529 16.2314 14.5656 16.5794 14.2468 16.8973C13.2788 17.8634 12.0499 18.5261 10.7108 18.8043C9.77964 18.9931 8.82002 18.9931 7.88883 18.8043C6.99369 18.6198 6.14335 18.2617 5.38583 17.7503C4.64028 17.2476 3.99858 16.6059 3.49583 15.8603C2.71561 14.7038 2.29878 13.3404 2.29883 11.9453H0.298828C0.298676 13.7392 0.834604 15.4922 1.83783 16.9793C2.48575 17.9354 3.30975 18.7594 4.26583 19.4073C5.75145 20.4128 7.50494 20.9486 9.29883 20.9453C9.90813 20.9459 10.5159 20.8846 11.1128 20.7623C12.2637 20.525 13.3569 20.0647 14.3308 19.4073C14.8087 19.0845 15.2544 18.7164 15.6618 18.3083C16.0704 17.9006 16.4387 17.4546 16.7618 16.9763C17.7666 15.4911 18.302 13.7384 18.2988 11.9453C18.2994 11.336 18.2381 10.7282 18.1158 10.1313Z" fill="black" />
+                                            <path d="M9.29883 14.2788C10.5521 14.2788 11.5488 13.1696 11.5488 11.7788C11.5488 10.388 10.5521 9.27881 9.29883 9.27881C8.04558 9.27881 7.04883 10.388 7.04883 11.7788C7.04883 13.1696 8.04558 14.2788 9.29883 14.2788Z" fill="black" />
+                                        </svg>
+                                    </div>
+                                </Link>
                             </div>
                         </div>
 
                         <div
-                            className={`flex-1 flex flex-col justify-end overflow-y-auto px-4 py-3 space-y-3 text-sm text-neutral-800 ${isFullScreen ? "max-h-[100dvh]" : "max-h-80"
-                                }`}
+                            className="flex-1 overflow-y-auto px-4 py-3 space-y-3 text-sm text-neutral-800"
                         >
-                            {messages.length === 0 ? (
-                                <p className="text-center text-neutral-400 text-xs py-4">Start messaging Stuck</p>
-                            ) : (
-                                <>
-                                    {messages.map((msg, index) => (
-                                        <div
-                                            key={index}
-                                            className={`max-w-[80%] px-4 py-2 rounded-md w-fit ${msg.sender === "user"
-                                                ? "bg-blue-100 self-end text-right ml-auto block"
-                                                : "bg-neutral-100 self-start block"
-                                                }`}
-                                        >
-                                            {msg.text}
-                                        </div>
-                                    ))}
-                                    <div ref={messagesEndRef} />
-                                </>
-                            )}
+                            <p className="text-center text-neutral-400 text-xs py-4 px-6">Messages generated with Stuck are protected with end to end encreption.</p>
+                            {messages.map((msg, index) => (
+                                <div
+                                    key={index}
+                                    className={`max-w-[80%] px-4 py-2 rounded-md w-fit ${msg.sender === "user"
+                                        ? "bg-blue-100 self-end text-right ml-auto block"
+                                        : "bg-neutral-100 self-start block"
+                                        }`}
+                                >
+                                    {msg.text}
+                                </div>
+                            ))}
+                            <div ref={messagesEndRef} />
                         </div>
 
                         <div className="px-3 py-2 flex items-center gap-2 bg-neutral-50 shadow-t-xl border-t border-[#b7b7b7]">
@@ -199,22 +210,22 @@ export default function Chat() {
                                             setInput("");
                                             inputRef.current?.focus();
                                         }}
-                                        className="flex gap-2.5 items-center p-3 rounded-lg transition-all duration-300 bg-transparent hover:scale-[1.02]"
+                                        className="flex gap-2.5 items-center p-3 rounded-lg transition-all duration-300 bg-transparent hover:bg-[#C0B400] hover:invert-100 hover:shadow-md hover:scale-[1.02]"
 
                                     >
                                         <svg xmlns="http://www.w3.org/2000/svg" width="19" height="21" viewBox="0 0 19 21" fill="none">
                                             <path d="M18.1158 10.1313C17.8812 8.97935 17.4207 7.88529 16.7608 6.91231C16.1144 5.95375 15.2894 5.12871 14.3308 4.48231C13.3566 3.82479 12.263 3.36445 11.1118 3.12731C10.507 3.00445 9.89105 2.94413 9.27383 2.94731V0.945312L5.29883 3.94531L9.27383 6.94531V4.94731C9.75783 4.94531 10.2418 4.99131 10.7088 5.08731C11.6035 5.27169 12.4535 5.62942 13.2108 6.14031C13.9573 6.64346 14.5997 7.28586 15.1028 8.03231C15.884 9.18762 16.3006 10.5507 16.2988 11.9453C16.2995 12.8813 16.1125 13.8079 15.7488 14.6703C15.573 15.0862 15.3573 15.484 15.1048 15.8583C14.8529 16.2314 14.5656 16.5794 14.2468 16.8973C13.2788 17.8634 12.0499 18.5261 10.7108 18.8043C9.77964 18.9931 8.82002 18.9931 7.88883 18.8043C6.99369 18.6198 6.14335 18.2617 5.38583 17.7503C4.64028 17.2476 3.99858 16.6059 3.49583 15.8603C2.71561 14.7038 2.29878 13.3404 2.29883 11.9453H0.298828C0.298676 13.7392 0.834604 15.4922 1.83783 16.9793C2.48575 17.9354 3.30975 18.7594 4.26583 19.4073C5.75145 20.4128 7.50494 20.9486 9.29883 20.9453C9.90813 20.9459 10.5159 20.8846 11.1128 20.7623C12.2637 20.525 13.3569 20.0647 14.3308 19.4073C14.8087 19.0845 15.2544 18.7164 15.6618 18.3083C16.0704 17.9006 16.4387 17.4546 16.7618 16.9763C17.7666 15.4911 18.302 13.7384 18.2988 11.9453C18.2994 11.336 18.2381 10.7282 18.1158 10.1313Z" fill="black" />
-                                            <path d="M9.29883 14.2788C10.6913 14.2788 11.7988 13.1696 11.7988 11.7788C11.7988 10.388 10.6913 9.27881 9.29883 9.27881C7.90633 9.27881 6.79883 10.388 6.79883 11.7788C6.79883 13.1696 7.90633 14.2788 9.29883 14.2788Z" fill="black" />
+                                            <path d="M9.29883 14.2788C10.5521 14.2788 11.5488 13.1696 11.5488 11.7788C11.5488 10.388 10.5521 9.27881 9.29883 9.27881C8.04558 9.27881 7.04883 10.388 7.04883 11.7788C7.04883 13.1696 8.04558 14.2788 9.29883 14.2788Z" fill="black" />
                                         </svg>
                                         <p>Clear Chat</p>
                                     </div>
                                 </Link>
                                 <Link href="#">
-                                    <div className="flex gap-2.5 items-center p-3 rounded-lg transition-all duration-300 bg-transparent hover:scale-[1.02]">
+                                    <div className="flex gap-2.5 items-center p-3 rounded-lg transition-all duration-300 bg-transparent hover:bg-[#C0B400] hover:invert-100 hover:shadow-md hover:scale-[1.02]">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="17" height="21" viewBox="0 0 17 21" fill="none">
                                             <path d="M4.29883 11.9453H12.2988V9.94531H4.29883V11.9453ZM4.29883 14.9453H12.2988V12.9453H4.29883V14.9453ZM4.29883 17.9453H9.29883V15.9453H4.29883V17.9453ZM2.29883 20.9453C1.74883 20.9453 1.27816 20.7496 0.886828 20.3583C0.495495 19.967 0.299495 19.496 0.298828 18.9453V2.94531C0.298828 2.39531 0.494828 1.92465 0.886828 1.53331C1.27883 1.14198 1.74949 0.945979 2.29883 0.945312H10.2988L16.2988 6.94531V18.9453C16.2988 19.4953 16.1032 19.9663 15.7118 20.3583C15.3205 20.7503 14.8495 20.946 14.2988 20.9453H2.29883ZM9.29883 7.94531H14.2988L9.29883 2.94531V7.94531Z" fill="black" />
                                         </svg>
-                                        <p>Go to Docs</p>
+                                        <p>Whitepaper</p>
                                     </div>
                                 </Link>
                                 <div className="h-[1px] w-full bg-black"></div>

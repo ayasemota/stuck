@@ -23,12 +23,20 @@ export default function getStarted() {
                         <div className="bg-[#3F4AE4] p-10 min-h-[470px] w-[360px] flex flex-col gap-6 rounded-2xl hover:scale-105 transition-all translate-2">
                             <h1 className="text-white text-3xl font-bold">Start Messaging for Free</h1>
                             <p className="text-[#C0C4FF]">Get traffic updates via WhatsApp with no stress for free</p>
-                            <Link href="#" className="pointer">
-                                <Button
-                                    fill="white"
-                                    text="Message Chatbot"
-                                />
-                            </Link>
+                            <div className="flex flex-wrap gap-3">
+                                <Link href="#">
+                                    <Button
+                                        fill="white"
+                                        text="Message Chatbot"
+                                    />
+                                </Link>
+                                <Link href="#">
+                                    <Button
+                                        fill="white"
+                                        text="WhatsApp Chat"
+                                    />
+                                </Link>
+                            </div>
                         </div>
                         <div className="bg-white border border-[#3F4AE4] text-[#3F4AE4] p-10 min-h-[470px] w-[360px] flex flex-col gap-6 rounded-2xl hover:scale-105 transition-all translate-2">
                             <h1 className="text-3xl font-bold">Download our app for a better experience</h1>
