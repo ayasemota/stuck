@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+@theme {
+    --color-main: #3F4AE4;
+    --color-main-hover: #1a4bff;
+    --color-main-invert: #C0B400;
+    --color-border: #b7b7b7;
+}
