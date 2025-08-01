@@ -20,7 +20,7 @@ export async function POST(req: Request) {
 
     return NextResponse.json(
       {
-        text: "‼️ Stuck servers are currently unavailable. Please try again later.",
+        text: "‼️ Stuck servers are currently unavailable. This may be due to a weak or no signal. Please check and try again!",
       },
       { status: 500 }
     );

@@ -12,9 +12,9 @@ export default function Home() {
     <>
       <Navbar />
 
-      <section className="py-15 w-full flex flex-col justify-center min-h-[80vh] items-center text-center gap-12">
+      <section className="py-10 w-full flex flex-col justify-center min-h-[80vh] items-center text-center gap-12">
         <div className="px-4 container flex flex-col items-center gap-7">
-          <h1 className="font-bold text-h1 text-black">
+          <h1 className="font-bold text-h2 md:text-h1 text-black">
             Stay Ahead of Traffic Congestion
           </h1>
           <p className="w-[1000px] max-w-[80vw]">
