@@ -14,10 +14,10 @@ export default function Home() {
 
       <section className="py-15 w-full flex flex-col justify-center min-h-[80vh] items-center text-center gap-12">
         <div className="px-4 container flex flex-col items-center gap-7">
-          <h1 className="font-bold text-6xl leading-18 text-black">
+          <h1 className="font-bold text-h1 text-black">
             Stay Ahead of Traffic Congestion
           </h1>
-          <p className="text-2xl w-[1000px] max-w-[80vw] leading-10">
+          <p className="w-[1000px] max-w-[80vw]">
             Get real-time traffic updates in an instant! With just a few taps,
             our WhatsApp chatbot keeps you ahead of the road—saving you time and
             stress on every commute.
@@ -89,7 +89,7 @@ export default function Home() {
 
       <section className="w-full flex flex-col text-center items-center justify-center pt-[130px] px-8 gap-10">
         <div className="container max-w-[1000px]">
-          <h1 className="font-bold text-4xl leading-12 text-center">
+          <h1 className="font-bold text-h2 text-center">
             &quot;We keep you from getting{" "}
             <span className="bg-[#DFE6FF] px-4 py-1 rounded-full">
               stuck in traffic,
@@ -97,7 +97,7 @@ export default function Home() {
             so you can stay on the move and reach your destination faster.&quot;
           </h1>
         </div>
-        <div className="text-4xl flex flex-col container gap-10 max-w-[1000px]">
+        <div className="flex flex-col container gap-10 max-w-[1000px]">
           <div className="w-full flex">
             <Chattext
               text="There is no traffic jam on your usual destination today"
@@ -116,11 +116,11 @@ export default function Home() {
 
       <section className="w-full flex flex-col text-center items-center justify-center py-[130px] px-8 gap-10">
         <div className="container">
-          <h1 className="font-bold text-5xl text-main mb-28">How It Works</h1>
+          <h1 className="font-bold text-h1 text-main mb-28">How It Works</h1>
 
           <div className="flex flex-wrap justify-center xl:justify-between gap-28 xl:gap-10">
             <div className="bg-[#F9F9FF] hover:bg-main text-black hover:text-white transition-all duration-300 ease-in-out w-[400px] h-[450px] rounded-2xl p-8 flex flex-col justify-center items-center gap-6 relative">
-              <h1 className="text-4xl">Sign Up & Set Your Routes</h1>
+              <h1 className="text-h2">Sign Up & Set Your Routes</h1>
               <p className="text-[16px] max-w-[300px]">
                 Create an account and easily add your regular routes to the
                 system.
@@ -193,7 +193,7 @@ export default function Home() {
             <h1 className="text-5xl font-medium w-[80%] leading-14">
               Changing the narrative on the road
             </h1>
-            <p className="text-2xl">
+            <p>
               Helping road users reduce stress and fear of traffic congestion
             </p>
             <div className="flex flex-wrap justify-center gap-6">

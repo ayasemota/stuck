@@ -18,9 +18,9 @@ export default function GetStarted() {
 
       <section className="flex flex-col justify-center items-center text-center bg-blue py-10 gap-10 min-h-[70vh]">
         <div className="max-w-[90vw]">
-          <div className="grid gap-9">
-            <h1 className="text-black font-bold text-6xl">Get Started</h1>
-            <p className="w-[590px] max-w-[90vw] text-2xl">
+          <div className="grid gap-2">
+            <h1 className="text-black font-bold text-h1">Get Started</h1>
+            <p className="w-[590px] max-w-[90vw]">
               Welcome, Get unlimited usage on our free plan, and more features
               if you download our application
             </p>
@@ -30,7 +30,7 @@ export default function GetStarted() {
         <div className="text-start">
           <div className="flex flex-wrap justify-center gap-10 max-w-[90vw]">
             <div className="bg-main p-10 min-h-[470px] w-[360px] flex flex-col gap-6 rounded-2xl hover:scale-105 transition-all translate-2">
-              <h1 className="text-white text-3xl font-bold">
+              <h1 className="text-white text-h3 font-bold">
                 Start Messaging for Free
               </h1>
               <p className="text-[#C0C4FF]">
@@ -46,7 +46,7 @@ export default function GetStarted() {
               </div>
             </div>
             <div className="bg-white border border-main text-main p-10 min-h-[470px] w-[360px] flex flex-col gap-6 rounded-2xl hover:scale-105 transition-all translate-2">
-              <h1 className="text-3xl font-bold">
+              <h1 className="text-h2 font-bold">
                 Download our app for a better experience
               </h1>
               <p className="text-main">
@@ -55,7 +55,7 @@ export default function GetStarted() {
                 steady location saved to our database
               </p>
               <div className="flex gap-2">
-                <Link href="#" className="text-lg">
+                <Link href="#">
                   <Image
                     src="/appstore.png"
                     alt="App Store"
@@ -63,7 +63,7 @@ export default function GetStarted() {
                     height={50}
                   />
                 </Link>
-                <Link href="#" className="text-lg">
+                <Link href="#">
                   <Image
                     src="/playstore.png"
                     alt="Play Store"

@@ -1,8 +1,14 @@
 @import "tailwindcss";
 
 @theme {
+    --text-h1: 52px;
+    --text-h2: 32px;
+    --text-h3: 24px;
+    --text-body: 16px;
+    --text-small: 12px;
     --color-main: #3F4AE4;
     --color-main-hover: #1a4bff;
     --color-main-invert: #C0B400;
     --color-border: #b7b7b7;
+    --color-brown: #6A6A6A;
 }

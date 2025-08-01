@@ -7,44 +7,44 @@ export default function Footer() {
       <div className="flex flex-col justify-center items-center gap-[88px] pt-10">
         <div className="container justify-between p-10 gap-10 grid grid-cols-1 md:flex md:flex-wrap">
           <div className="flex flex-col gap-4 w-fit">
-            <h1 className="text-3xl">Company</h1>
-            <Link href="#" className="text-lg">
+            <h1 className="text-h2">Company</h1>
+            <Link href="#">
               Home
             </Link>
-            <Link href="#" className="text-lg">
+            <Link href="#">
               Message Chatbot
             </Link>
-            <Link href="#" className="text-lg">
+            <Link href="#">
               Contact Us
             </Link>
           </div>
           <div className="flex flex-col gap-4 w-fit">
-            <h1 className="text-3xl">Support</h1>
-            <Link href="#" className="text-lg">
+            <h1 className="text-h2">Support</h1>
+            <Link href="#">
               info@stuckhq.africa
             </Link>
-            <Link href="#" className="text-lg">
+            <Link href="#">
               Safety Center
             </Link>
-            <Link href="#" className="text-lg">
+            <Link href="#">
               Community Guidelines
             </Link>
           </div>
           <div className="flex flex-col gap-4 w-fit">
-            <h1 className="text-3xl">Legal</h1>
-            <Link href="#" className="text-lg">
+            <h1 className="text-h2">Legal</h1>
+            <Link href="#">
               Privacy Policy
             </Link>
-            <Link href="#" className="text-lg">
+            <Link href="#">
               Terms of Service
             </Link>
-            <Link href="#" className="text-lg">
+            <Link href="#">
               Law Enforcement
             </Link>
           </div>
           <div className="flex flex-col gap-4 w-fit">
-            <h1 className="text-3xl">Install App</h1>
-            <Link href="#" className="text-lg">
+            <h1 className="text-h2">Install App</h1>
+            <Link href="#">
               <Image
                 src="/appstore.png"
                 alt="App Store"
@@ -52,7 +52,7 @@ export default function Footer() {
                 height={50}
               />
             </Link>
-            <Link href="#" className="text-lg">
+            <Link href="#">
               <Image
                 src="/playstore.png"
                 alt="Play Store"
@@ -62,8 +62,8 @@ export default function Footer() {
             </Link>
           </div>
           <div className="flex flex-col gap-4 w-fit">
-            <h1 className="text-3xl">Chat with chatbot</h1>
-            <Link href="#" className="text-lg">
+            <h1 className="text-h2">Chat with chatbot</h1>
+            <Link href="#">
               +234 - 800- 0000 - 300
             </Link>
           </div>

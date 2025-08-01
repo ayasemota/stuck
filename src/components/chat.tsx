@@ -193,8 +193,8 @@ export default function Chat() {
               </div>
             </div>
 
-            <div className="flex-1 overflow-y-auto px-4 py-3 space-y-3 text-sm text-neutral-800">
-              <p className="text-center text-neutral-400 text-xs py-4 px-6">
+            <div className="flex-1 overflow-y-auto px-4 py-3 space-y-3 text-small text-neutral-800">
+              <p className="text-center text-neutral-400 py-4 px-6">
                 Messages generated with Stuck are protected with end to end
                 encreption.
               </p>
@@ -213,11 +213,11 @@ export default function Chat() {
               <div ref={messagesEndRef} />
             </div>
 
-            <div className="px-3 py-2 flex items-center gap-2 bg-neutral-50 shadow-t-xl border-t border-border">
+            <div className="text-small px-3 py-2 flex items-center gap-2 bg-neutral-50 shadow-t-xl border-t border-border">
               <input
                 type="text"
                 ref={inputRef}
-                className="flex-1 px-3 py-2 text-sm rounded-md focus:outline-none focus:ring-0 border border-main"
+                className="flex-1 px-3 py-2 rounded-md focus:outline-none focus:ring-0 border border-main"
                 placeholder="Message Stuck..."
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
@@ -225,7 +225,7 @@ export default function Chat() {
               />
               <button
                 onClick={handleSend}
-                className="bg-main hover:bg-main-hover text-white text-sm px-4 py-2 rounded-md transition"
+                className="bg-main hover:bg-main-hover text-white h-full px-4 py-2 rounded-md transition"
               >
                 Send
               </button>
@@ -237,7 +237,7 @@ export default function Chat() {
                 <div className="flex flex-col gap-4 px-6 w-full">
                   <div className="flex flex-col items-center gap-3">
                     <Logo width={130} color={true} />
-                    <p className="text-[16px]">Version 1.0</p>
+                    <p>Version 1.0</p>
                   </div>
                   <div className="flex gap-2.5">
                     <svg

@@ -12,7 +12,7 @@ export default function Chattext({ text, backgroundColor, thumb }: CardProps) {
       style={{ backgroundColor }}
       className="py-6 px-10 text-start shadow-[0_4.28px_4.28px_0_rgba(0,0,0,0.10)] rounded-tr-4xl rounded-br-4xl rounded-bl-4xl rounded-tl-none flex flex-col gap-3 relative"
     >
-      <p className="text-2xl text-black max-w-[400px]">{text}</p>
+      <p className="text-black max-w-[400px]">{text}</p>
       <div className="flex items-center justify-end gap-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +26,7 @@ export default function Chattext({ text, backgroundColor, thumb }: CardProps) {
             fill="#5A5A5A"
           />
         </svg>
-        <p className="text-[12px]">12:00PM</p>
+        <p className="text-small">12:00PM</p>
       </div>
       {thumb ? (
         <div className="bg-white h-11 w-11 rounded-full flex items-center justify-center absolute -bottom-6 left-6 shadow-[0_-4.28px_4.28px_0_rgba(0,0,0,0.10)]">
