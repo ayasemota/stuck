@@ -124,8 +124,8 @@ export default function Chat() {
                             : "bottom-26 right-6 w-90 max-h-[60vh] max-w-[80vw] rounded-lg"
                         }`}
         >
-          <div className="flex flex-col justify-between h-full w-full">
-            <div className="sticky top-0 px-6 py-5 bg-neutral-50 flex justify-between items-center border-b border-border">
+          <div className="flex flex-col justify-between">
+            <div className="px-6 py-5 bg-neutral-50 flex justify-between items-center border-b border-border">
               <Logo width={80} color={true} main={false} />
               <div className="h-5 w-5 rounded-full flex justify-end gap-6 items-center">
                 <Link
@@ -151,7 +151,10 @@ export default function Chat() {
               </div>
             </div>
 
-            <div className="flex-1 gap-3 overflow-y-auto px-4 py-3 text-small text-neutral-800">
+            <div
+              className={`max-w-full flex flex-col justify-end-safe flex-1 gap-3 overflow-y-auto px-4 py-3 text-small text-neutral-800
+             ${isFullScreen ? "w-screen" : "w-full"}`}
+            >
               <p className="text-center text-neutral-400 py-4 px-6">
                 Messages generated with Stuck are protected with end to end
                 encreption.
@@ -171,7 +174,7 @@ export default function Chat() {
               <div ref={messagesEndRef} />
             </div>
 
-            <div className="sticky bottom-0 text-small px-3 py-2 flex items-center gap-2 bg-neutral-50 shadow-t-xl border-t border-border">
+            <div className="text-small px-3 py-2 flex items-center gap-2 bg-neutral-50 shadow-t-xl border-t border-border">
               <input
                 type="text"
                 ref={inputRef}

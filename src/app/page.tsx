@@ -12,8 +12,8 @@ export default function Home() {
     <>
       <Navbar />
 
-      <section className="py-10 w-full flex flex-col justify-center min-h-[80vh] items-center text-center gap-12">
-        <div className="px-4 container flex flex-col items-center gap-7">
+      <section className="py-10 b-10 w-full flex flex-col justify-center items-center text-center gap-12">
+        <div className="px-4 py-12 container flex flex-col items-center gap-7">
           <h1 className="font-bold text-h2 md:text-h1 text-black">
             Stay Ahead of Traffic Congestion
           </h1>
@@ -74,7 +74,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full flex flex-col text-center items-center justify-center">
+      <section className="mt-10 w-full flex flex-col text-center items-center justify-center">
         <div className="container flex flex-col justify-center gap-9 max-w-[80vw]">
           <p className="tracking-[16px] text-black">Sponsored by</p>
           <div className="flex flex-wrap justify-center md:justify-between gap-16">
